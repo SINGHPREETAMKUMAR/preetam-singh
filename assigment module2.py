@@ -1,250 +1,281 @@
 """
-1. WAP sum of first n +ve integers
+1. WAP to sum of the first n positive integers
 """
-n = int(input("Enter the No.:"))
-sum=0
-for i in range(0,n+1):
-    sum=sum+i
-    n=n-1
-print("Sum:",sum)
+# n = int(input("Enter a number: "))
+# sum = (n * (n + 1)) / 2
+# print("sum : ", sum)
 
 """
-2. WAP to count occurrences of a substring in a string
-"""
-s = "Hello Python Programming"
-print(s)
-print(s.count("o"))
-
-"""
-3. WAP to count occurrence of each woprd in a given sentence
-"""
-s = "It's not okay to be okay"
-r = input("Enter the word: ")
-a=[]
-count=0
-a = s.split(" ")
-for i in range(0,10):
-    if(r==a[i]):
-        count = count+1
-print("Count of word is: ", count)
-"""
-4. WAP to get a single string from two given string, seperate by a space and swap the first two characters of each string.
-"""
-s1 = input("Enter String 1: ")
-s2 = input("Enter String 2: ")
-print(s1)
-print(s2)
-s1,s2=s2,s1
-print("After swapping String 1=", s1, "String 2=", s2)
-
-"""
-5. WAP to add 'ing' at the end of a given string (length should be at least 3).If the given string already ends with 'ing' then add 'ly' instead If the string length of the given string is less than 3, leave it unchanged
-"""
-def add_string(str1):
-  length = len(str1)
-  if length > 2:
-    if str1[-3:] == "ing":
-      str1 += "ly"
-    else:
-      str1 += "ing"
-  return str1
-print(add_string("dp"))
-print(add_string("dpp"))
-print(add_string("string"))
-
-"""
-6. WAP to find the first appearance of the substring 'not' and 'poor' from a given string, if 'not' follows the 'poor', replace the whole 'not'...'poor' substring with 'good'.
-"""
-#Return the resulting string
-def not_poor(s1):
-  snot = s1.find('not')
-  spoor = s1.find('poor')
-  
-  if spoor > snot and snot>0 and spoor>0:
-    s1 = s1.replace(s1[snot:(spoor+4)], 'good')
-    return s1
-  else:
-    return s1
-print(not_poor('The lyrics is not that poor!'))
-print(not_poor('The lyrics is poor!'))
-"""
-7. WAP to find the greatest common divisor of two numbers
-from math import gcd
-"""
-a = int(input("Enter the number1: "))
-b = int(input("Enter the number2: "))
-gcd(a,b)
-print("The gcd of number1 and number2 is: ", gcd(a,b))
-
-"""
-8.WAP to check whether a list contains a sublist
-"""
-l1 = [0,1,2,3,4,5,6,7,8,9]
-l2 = [2,4,6,18]
-print(l1)
-print(l2)
-if (set(l2).issubset  (set(l1))):
-    print("L2 is subset of L1")
-else:
-    print("L2 is not the subset of L1"
-
-"""
-9. WAP to find the second smallest number in a list
-""
-l1 = [100,101,102,103,104,105]
-l1.sort()
-print("Second smallest number: ", l1[1])
-
-
-"""
-10.write a python program to get a unique values from a list.
-"""
-#s={10,20,30,50,30,10,61,85,61}
-#print(s)
-          
-"""
-11.write a python program to unzip a list of tuples into individual lists.
-"""
-#t=(10,20,30,40,50)
-#print(t)
-#for iteam in t:
-#   print(iteam)
-
-"""
-12.write a python program to convert of tuples into dictionary.
-"""
-#t=[("apple",1),("orange",2)]
-#print(t)
-#my_dict=dict(t)
-#print(my_dict)
-
-"""
-13.write a python program to sort a dictionary(ascending/descending)by value
-"""
-#my_dict={"apple":10,"banna":5,"mango":15}
-#asc=dict(sorted(my_dict.items(),key=lambda x:x[1]
-#desc=dict(sorted(my_dict.items(),key=lambda x:x[1]
-#print ("origanal dictioary:",my_dict)
-#print("sorted dictionary(ascending):,(asc))
-#print("sorted dictionary(descending):,(desc))
-
-"""
-14.write a python program to find the higgest 3 values in dictionary.
+2. WAP to count occurences of a substring in a string
 """
 
-my_dict={"a":10,"b":14,"c":60,"d":80,"e":55}
-#sorted dictionry=sorted(my_dict.items(),key=lambda x:x[1],reverse=true)
-#higest_value=[value for key,value in sorted_dict[:3]]
-#print("the higest 3 values in the dictionary are:,higest_value)
-
+# string = input("Enter a string: ")
+# substring = input("Enter a substring: ")
+# count = string.count(substring)
+# print(f"The substring '{substring}' occurs {count} times in the string.")
 
 """
-15.given a number n,write a python program to make and print the list of fibonacci series up to n.
-input:n=7
-hint:first 7 number in the series
-excepted output:
-first few fibonacci numbers are 0,1,,1,2,5,6,3,8,9,13
+3. WAP to count the occurences of each word in a sentence
 """
- #def fibonacciseries(i):
-     #if i<=1:
-         #returni
-         #else:
-             #return(fibonacciseries(i-1)+fibonacciseries(i-2))
-            #num=int(input("enter a number")
-            #if num<=0:
-                    
-                #print("please enter a positive number")
-                    #else:
-                        #print("fibonacci series:",end=" ")
-                        #for i in range(num)
-                        #print(fibonacciseries(i),end=" ")
-                        
 
-             
+# sentence = input("Enter a sentence: ")
+# words = sentence.split()
+# word_count = {}
+# for word in words:
+#     if word in word_count:
+#         word_count[word] +=1
+
+#     else:
+#         word_count[word] =1
+
+# print("word frequency")
+# for word, count in word_count.items():
+#   print(f"{word}: {count}")
+
 """
-16.counting the frequencies in a list using a dictionary in python.
+4. WAP to get a single string from two given strings, separated by a space and swap the first two characters of each string.
 """
-l1=[,2,3,5,8,7,2,3,6,5,9,1]
-freq={}
-for (iteam in freq):
-       freq[item]+=1
-       else:
-           freq[iteam]=1
-           for key,value in freq.iteam():
-               print("%d:%d"%(key,value))
 
+# str1 = "Python"
+# str2 = "Java"
 
+# newstr1 = str2[:2]+str1[2:] + " " + str1[:2]+str2[2:]
+# print(newstr1)
 
+"""
+5. WAP to add 'ing' at the end of a given string (length should be at least 3).
+If the given string already ends with 'ing' then add 'ly' instead If the string length of the given string is less than 3, leave it unchanged
+"""
+# string = input("Enter a string: ")
+
+# if len(string) < 3:
+#     new_string = string
+# elif string[-3:] =="ing":
+#     new_string = string + "ily"
+# else:
+#     new_string = string + "ing"
+# print("New string: ", new_string)
+
+"""
+7. Program to find greatest common divisor of two numbers.
+"""
+
+# def hcf(a, b):
+#     if(b == 0):
+#         return a
+#     else:
+#         return hcf(b, a % b)
+#     a = 4
+#     b = 14
+
+# print("GCD of a and b is : ")
+# print(hcf(4, 14))
+
+"""
+8. Write a python program to check whether a list contains a sublist.
+"""
+
+# def is_sublist(list1, list2):
+#     return set(list1).issubset(set(list2))
+
+# list1 = [1,2,3]
+# list2 = [0,1,2,3,4,5]
+
+# if is_sublist(list1, list2):
+#     print("List 2 contains List 1 as a sublist.")
+# else:
+#     print("List 2 does not contain List 1 as a sublist")
+
+"""
+9. Write a Python program to find the second smallest number in a list.
+"""
+
+# l1 = [1,2,3,4,5,10,13,15]
+# l1.sort()
+# print("Second smallest number: ", l1[1])
+
+"""
+10. Write a python program to get a unique values from a list.
+"""
+
+# s = {10,20,30,30,20,10,61,35,61,35}
+# print(s)
+
+"""
+11. Write a python program to unzip of tuples into individual lists.
+"""
+
+# t = (10,20,30,40,50,60)
+# print(t)
+# for item in t:
+#     print(item)
+
+"""
+12. Write a Python program to convert of tuples into dictionary.
+"""
+
+# t = [("Apple", 1), ("Orange", 2)]
+# print(t)
+# my_dict = dict(t)
+# print(my_dict)
+
+"""
+13. Write a Python program to sort a dictionary (ascending/descending)by value
+"""
+# my_dict = {"apple" : 10, "banana" : 5, "mango" : 15}
+# asc = dict(sorted(my_dict.items(), key=lambda x: x[1]))
+# desc = dict(sorted(my_dict.items(), key=lambda x: x[1], reverse = True))
+# print("original dictionary:", my_dict)
+# print("sorted dictionary (ascending):" ,(asc))
+# print("sorted dictionary (descending):", (desc))
+
+"""
+14. Write a Python program to find the highest 3 values in dictionary.
+"""
+
+# my_dict = {"a": 10, "b": 14, "c": 20, "d": 12, "e": 11}
+# sorted_dict = sorted(my_dict.items(), key=lambda x: x[1], reverse=True)
+# highest_values = [value for key, value in sorted_dict[:3]]
+# print("The hoghest 3 values in the dictionary are:", highest_values)
+
+"""
+15. Given a number n, write a python program to make and print the list of Fibonacci series up to n.
+Input: n = 7
+Hint : first 7 numbers in the series
+Expected output:
+First few Fibonacci numbers are 0,1,1,2,3,5,8,13
+"""
+
+# def fibonacciseries(i):
+#     if i <= 1:
+#         return i
+#     else:
+#         return(fibonacciseries(i - 1) + fibonacciseries(i -2))
+# num = int(input("Enter the Number: "))
+# if num <= 0:
+#     print("Please enter a positive number")
+# else:
+#     print("Fibonacci Series:", end=" ")
+# for i in range(num):
+#     print(fibonacciseries(i), end=" ")
+
+"""
+16. Counting the frequencies in a list using a dictionary in Python.
+"""
+# L1 = [1,2,3,4,5,2,34,6,7,8,9,0,9]
+# freq = {}
+# for item in L1:
+#     if(item in freq):
+#         freq[item] += 1
+#     else:
+#         freq[item] = 1
+# for key, value in freq.items():
+#     print("% d: % d"%(key, value))
+
+"""
+18. Write a Python program to find the factorial of number using Recursion.
+"""
+
+# num = int(input("Enter the Number: "))
+# def factorial_recursive(n):
+#     if n==1:
+#         return 1
+#     else:
+#         return (n * factorial_recursive(n-1))
+
+#     print("Factorial using recursive method ", factorial_recursive(number))
+
+"""
+19. Write a Python program that takes a list and returns a new list with unique elements of the first list.
+"""
+
+# def unique_list(l1):
+#     x = []
+#     for a in l:
+#         if a not in x :
+#             x.append(a)
+#         return x 
+#     print(unique_list([1,2,3,3,3,4,4,5,6]))
+
+"""
+20. Make a program to generate a strong password using the input given by the user. To generate a password,
+randomly take some words from the user input and then include numbers, special characters and capital
+letters to generate the password. Also, keep a check that password length is more than 8 characters.
+"""
+# import random
+# import array
+ 
+# db = {} #blank dictionary
+
+# def Creat_Pass(firstname,password): # function with parameters..
+#     db['name'] = firstname
+#     db['password'] = password
+#     print("Password created successfully...")
+
+# def Access_Pass(name):
+#     if name == db['name']:
+#         return db['password']
                
-"""
-17.write a python program using function to finf the sum of odd series and even series
-odd series:12/1! +32/3! +52/5! +
-
-
-"""
-18.write a program  to find factorail of number using recursion
-"""
-def factorial(n):
-    if (n==1 or n==0):
-        return 1
-        else:
-            return (n* factorial(n-1))
-            print("number:",num)
-            print("factrioal:",factrioal(num))
-
-
- """
- 19.write a program  that takes a list  and returns a new  list with  unique elements of the first list.
-"""
-def unique_list(1):
-    x=[]  
-    for a  in x:
-        x.append(a) 
-        return x
-        print(unique_list([1,1,2,2,2,3,3,3,5,6,8]))    
-
- """
- 20. make a program  to gennerate  a strong  password using the input given by the user. to generate a password,
- randomly take some words from the user the user input and then  include nummbers,special characters and captical 
- letter to generate the password.also,keep a check that password lenght is more than 8 characters.
- """
- import array
- import random
-
- max_len=12
- digits=['0','1','2','3','4','5','6','7','8','9',] 
- locase_characters=['a','b','c','d','e','f','g','h','i','e','f','g','h','e','f','i','j','q','z','x','v','n','m','w','e',]   
- upcase_characters=['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','X','Y','Z']
- symbols=['@','#','$",'%','^','&','*','<','.>,'?',]   
- cobined_list=digits+upcase_characters+locase_characters+symbols
- rand_digit=random.choice(digits)
- rand_upper=random.choice(upcase_characters)
- rand_lower=random.choice(locase_characters)
- rand_lower=random.choice(symobls)
- temp_pass=rand_digit+rand_upper+rand_lower+rand_symbol
-
-
- for x in range(max_len-4):
-              temp_pass=temp_pass+random.choice(combined-liist)
-              temp_pass_list=array.array('u',temp_pass)
-              random.shuffle(temp_pass_list)
-              password=""
-              for x in temp_pass_list:
-                                    password=password+x
-                                    print(pasword)
-
-
-
-  """                                  
-
-      
-      
-
-
+#     else:
+#         return "User not found.."
     
+# status = True
+# while status:
 
+#     menu = """
+#             1) press 1 for creating Password
+#             2) press 2 for accessing Password
+#             3) press 3 for exit
+#     """
+#     print(menu)
 
+#     choice = int(input("Enter your choice: "))
+#     if choice == 1:
+#         name = input("Enter name: ")
+    
+#         MAX_LEN = 8
 
+#         DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'] 
 
+#         LOCASE_CHARACTERS = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
+#                             'i', 'j', 'k', 'm', 'n', 'o', 'p', 'q',
+#                             'r', 's', 't', 'u', 'v', 'w', 'x', 'y',
+#                             'z']
+        
+#         UPCASE_CHARACTERS = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H',
+#                             'I', 'J', 'K', 'M', 'N', 'O', 'P', 'Q',
+#                             'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y',
+#                             'Z']
+        
+#         SYMBOLS = ['@', '#', '$', '%', '=', ':', '?', '.', '/', '|', '~', '>',
+#                 '*', '(', ')', '<']
 
+#         COMBINED_LIST = DIGITS + UPCASE_CHARACTERS + LOCASE_CHARACTERS + SYMBOLS
 
+#         rand_digit = random.choice(DIGITS)
+#         rand_upper = random.choice(UPCASE_CHARACTERS)
+#         rand_lower = random.choice(LOCASE_CHARACTERS)
+#         rand_symbol = random.choice(SYMBOLS)
+        
+#         temp_pass = rand_digit + rand_upper + rand_lower + rand_symbol
+        
+#         for x in range(MAX_LEN - 4):
+#             temp_pass = temp_pass + random.choice(COMBINED_LIST)
+        
+#             temp_pass_list = array.array('u', temp_pass)
+#             random.shuffle(temp_pass_list)
+        
+#         password = ""
+#         for x in temp_pass_list:
+#                 password = password + x
+                
+#         print(password)
+
+#         Creat_Pass(name,password)
+
+#     elif choice == 2:
+#         name = input("Enter name: ")
+#         print(Access_Pass(name))
+
+#     elif choice == 3:
+#         status = False
