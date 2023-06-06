@@ -173,6 +173,24 @@ First few Fibonacci numbers are 0,1,1,2,3,5,8,13
 #     print("% d: % d"%(key, value))
 
 """
+17. WAP using function to find the sum of off series and even series
+Odd Series: 12/1! + 32/3! + 52/5! + ....n
+Even series: 22/2! + 42/4! + 62/6! + ....n
+"""
+numbers = [12/1 + 32/3 + 52/5, 22/2 + 42/4 + 62/6]
+eventotal = 0
+oddtotal = 0
+
+for number in numbers:
+ if (number % 2 ==0):
+  eventtotal += number
+ else:
+  oddtotal += number
+  
+print("the sum of even numbers = ", eventotal)
+print("the sum of odd numbers = ", oddtotal)
+
+"""
 18. Write a Python program to find the factorial of number using Recursion.
 """
 
